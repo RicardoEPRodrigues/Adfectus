@@ -8,7 +8,7 @@ public class CPPThirdPersonEditorTarget : TargetRules
 	public CPPThirdPersonEditorTarget(TargetInfo Target) : base(Target)
 	{
 		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
+		DefaultBuildSettings = BuildSettingsVersion.V4;
 		Type = TargetType.Editor;
 		ExtraModuleNames.Add("CPPThirdPerson");
 	}

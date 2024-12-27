@@ -25,6 +25,8 @@ UEmojiFacialExpressionWidgetComponent::UEmojiFacialExpressionWidgetComponent()
 
 void UEmojiFacialExpressionWidgetComponent::BeginPlay()
 {
+	Super::BeginPlay();
+	
 	if (EmojiMaterial)
 	{
 		SetMaterial(0, EmojiMaterial);

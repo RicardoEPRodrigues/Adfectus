@@ -28,6 +28,8 @@ UBackgroundEmotionExpressionComponent::UBackgroundEmotionExpressionComponent()
 
 void UBackgroundEmotionExpressionComponent::BeginPlay()
 {
+	Super::BeginPlay();
+	
 	if (!BackgroundFX)
 	{
 		return;

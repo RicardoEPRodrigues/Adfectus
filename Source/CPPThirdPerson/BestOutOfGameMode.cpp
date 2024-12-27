@@ -241,13 +241,16 @@ void ABestOutOfGameMode::EndPlay(const EEndPlayReason::Type EndPlayReason)
 		EndGameHUD->OnRematchButtonEvent.RemoveDynamic(this, &ABestOutOfGameMode::OnEndGameRematchOptionPressed);
 		EndGameHUD->OnQuitButtonEvent.RemoveDynamic(this, &ABestOutOfGameMode::OnEndGameQuitOptionPressed);
 	}
-	
-	UGameplayStatics::RemovePlayer(SecondPlayerController, true);
-	SecondPlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 1);
-	if (SecondPlayerController)
+
+	if (EndPlayReason != EEndPlayReason::Quit && EndPlayReason != EEndPlayReason::EndPlayInEditor )
 	{
 		UGameplayStatics::RemovePlayer(SecondPlayerController, true);
-		SecondPlayerController = nullptr;
+		SecondPlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 1);
+		if (SecondPlayerController)
+		{
+			UGameplayStatics::RemovePlayer(SecondPlayerController, true);
+			SecondPlayerController = nullptr;
+		}
 	}
 }
 

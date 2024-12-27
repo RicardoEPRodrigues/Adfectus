@@ -7,8 +7,9 @@ public class CPPThirdPersonTarget : TargetRules
 {
 	public CPPThirdPersonTarget(TargetInfo Target) : base(Target)
 	{
-		DefaultBuildSettings = BuildSettingsVersion.V2;
 		Type = TargetType.Game;
+		DefaultBuildSettings = BuildSettingsVersion.V4;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 		ExtraModuleNames.Add("CPPThirdPerson");
 		
 		// bUseLoggingInShipping = true;

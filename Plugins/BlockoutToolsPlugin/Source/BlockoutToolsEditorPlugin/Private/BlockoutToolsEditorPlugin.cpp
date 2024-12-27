@@ -1,7 +1,8 @@
 // Copyright 2021 Dmitry Karpukhin. All Rights Reserved.
 
 #include "BlockoutToolsEditorPlugin.h"
-#include "PlacementMode/Public/IPlacementModeModule.h"
+
+#include "IPlacementModeModule.h"
 #include "Interfaces/IPluginManager.h"
 #include "Styling/SlateStyleRegistry.h"
 #include "Styling/SlateTypes.h"
